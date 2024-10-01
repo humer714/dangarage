@@ -12,38 +12,26 @@
     <!-- all css here -->
 
     <!--Favicon-->
-    <link rel="icon" href="{{ asset('front/asset2/img/favicon.png') }}" type="image/jpg" />
 
-    <!-- Bootstrap CSS -->
-    <link href="{{ asset('front/asset2/css/bootstrap.min.css') }}" rel="stylesheet">
-    <!-- Font Awesome CSS-->
-    <link href="{{ asset('front/asset2/css/font-awesome.min.css') }}" rel="stylesheet">
-    <!-- Line Awesome CSS -->
-    <link href="{{ asset('front/asset2/css/line-awesome.min.css') }}" rel="stylesheet">
-    <!-- Animate CSS-->
-    <link href="{{ asset('front/asset2/css/animate.css') }}" rel="stylesheet">
-    <!-- Bar Filler CSS -->
-    <link href="{{ asset('front/asset2/css/barfiller.css') }}" rel="stylesheet">
-    <!-- Magnific Popup Video -->
-    <link href="{{ asset('front/asset2/css/magnific-popup.css') }}" rel="stylesheet">
-    <!-- Flaticon CSS -->
-    <link href="{{ asset('front/asset2/css/flaticon.css') }}" rel="stylesheet">
-    <!-- Owl Carousel CSS -->
-    <link href="{{ asset('front/asset2/css/owl.carousel.css') }}" rel="stylesheet">
-    <!-- Style CSS -->
-    <link href="{{ asset('front/asset2/css/style.css') }}" rel="stylesheet">
-    <!-- Responsive CSS -->
-    <link href="{{ asset('front/asset2/css/responsive.css') }}" rel="stylesheet">
-
-
-    <!-- jquery -->
-    <script src="{{ asset('front/asset2/js/jquery-1.12.4.min.js') }}"></script>
-
-    <style>
-        .footer-area::before{
-            height: 0px !important;
-        }
-    </style>
+    <link rel="shortcut icon" href="{{ asset('front/asset2/img/favicon.png') }}">
+    <!--<< Bootstrap min.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/bootstrap.min.css') }}">
+    <!--<< All Min Css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/all.min.css') }}">
+    <!--<< Animate.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/animate.css') }}">
+    <!--<< Magnific Popup.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/magnific-popup.css') }}">
+    <!--<< MeanMenu.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/meanmenu.css') }}">
+    <!--<< Swiper Bundle.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/swiper-bundle.min.css') }}">
+    <!--<< Nice Select.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/nice-select.css') }}">
+    <!--<< Color.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/color.css') }}">
+    <!--<< Main.css >>-->
+    <link rel="stylesheet" href="{{ asset('front/asset2/css/main.css') }}">
 
     @yield('css')
 
@@ -83,26 +71,29 @@
     <a href="#top" class="go-top"><i class="las la-angle-up"></i></a>
 
 
-    <!-- Popper JS -->
-    <script src="{{ asset('front/asset2/js/popper.min.js') }}"></script>
-    <!-- Bootstrap JS -->
-    <script src="{{ asset('front/asset2/js/bootstrap.min.js') }}"></script>
-    <!-- Wow JS -->
-    <script src="{{ asset('front/asset2/js/wow.min.js') }}"></script>
-    <!-- Way Points JS -->
-    <script src="{{ asset('front/asset2/js/jquery.waypoints.min.js') }}"></script>
-    <!-- Counter Up JS -->
-    <script src="{{ asset('front/asset2/js/jquery.counterup.min.js') }}"></script>
-    <!-- Owl Carousel JS -->
-    <script src="{{ asset('front/asset2/js/owl.carousel.min.js') }}"></script>
-    <!-- Magnific Popup JS -->
-    <script src="{{ asset('front/asset2/js/magnific-popup.min.js') }}"></script>
-    <!-- Sticky JS -->
-    <script src="{{ asset('front/asset2/js/jquery.sticky.js') }}"></script>
-    <!-- Progress Bar JS -->
-    <script src="{{ asset('front/asset2/js/jquery.barfiller.js') }}"></script>
-    <!-- Main JS -->
-    <script src="{{ asset('front/asset2/js/main.js') }}"></script>
+        <!--<< All JS Plugins >>-->
+        <script src="{{ asset('front/asset2/js/jquery-3.7.1.min.js') }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset('front/asset2/js/viewport.jquery.js') }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset('front/asset2/js/bootstrap.bundle.min.js') }}"></script>
+        <!--<< Nice Select Js >>-->
+        <script src="{{ asset('front/asset2/js/jquery.nice-select.min.js') }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset('front/asset2/js/jquery.waypoints.js') }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset('front/asset2/js/jquery.counterup.min.js') }}"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="{{ asset('front/asset2/js/swiper-bundle.min.js') }}"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset('front/asset2/js/jquery.meanmenu.min.js') }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset('front/asset2/js/jquery.magnific-popup.min.js') }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset('front/asset2/js/wow.min.js') }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset('front/asset2/js/main.js') }}"></script>
+
     @yield('script')
 </body>
 

@@ -1,336 +1,506 @@
-/*
-  Theme Name: Fossil | Gas Station & Petrol Pump HTML Template
-  Author: Capricorn_Theme
-  Creation Date: 07 Feb 2024
-  Version: 1.0
-*/
+/*-----------------------------------------------------------------
 
-/* [Table of Contents]
+Template Name: Transko - Transport & Logistics HTML Template
+Author:  pixel-drop
+Author URI: https://themeforest.net/user/pixel-drop/portfolio/portfolio
+Version: 1.0.0
+Description: Transko - Transport & Logistics HTML Template<
 
-* 01. Mobile Menu 
-  02. Header Search Form 
+-------------------------------------------------------------------
+CSS TABLE OF CONTENTS
+-------------------------------------------------------------------
 
-  03. Owl Carousel
-        - Hero Area Slider
-        - Testimonial Carousel
-		- Client Carousel
-  04. Sticky Area
-  05. Progress Bar 
-  06. Counter Up 
-  07. Wow Animation 
-  08. Scroll to the Top
-  09. Active & Remove Class
-  10. Menu Active Color
-  11. Preloader 
-
-*/
-(function ($) {
-	"use strict";
-
-	// Mobile Menu
-
-	$(".navbar-toggler").on("click", function () {
-		$(this).toggleClass("active");
-	});
-
-	$(".navbar-nav li a").on("click", function () {
-		$(".sub-nav-toggler").removeClass("active");
-	});
-
-	var subMenu = $(".navbar-nav .sub-menu");
-
-	if (subMenu.length) {
-		subMenu
-			.parent("li")
-			.children("a")
-			.append(function () {
-				return '<button class="sub-nav-toggler"> <i class="fa fa-angle-down"></i> </button>';
-			});
-
-		var subMenuToggler = $(".navbar-nav .sub-nav-toggler");
-
-		subMenuToggler.on("click", function () {
-			$(this).parent().parent().children(".sub-menu").slideToggle();
-			return false;
-		});
-	}
-
-	//Header Search Form
-	if ($(".search-btn").length) {
-		$(".search-btn").on("click", function () {
-			$("body").addClass("search-active");
-		});
-		$(".close-search, .search-back-drop").on("click", function () {
-			$("body").removeClass("search-active");
-		});
-	}
-
-	// Hero Area Slider
-
-	$('.homepage-slides').owlCarousel({
-		items: 1,
-		dots: false,
-		nav: true,
-		loop: true,
-		autoplay: false,
-		autoplayTimeout: 5000,
-		smartSpeed: 2000,
-		slideSpeed: 600,
-		animateOut: 'fadeOut',
-		navText: ["<i class='la la-angle-left'></i>", "<i class='la la-angle-right'></i>"],
-		responsive: {
-			0: {
-				items: 1,
-				nav: false,
-				dots: false,
-			},
-			600: {
-				items: 1,
-				nav: false,
-				dots: false,
-			},
-			768: {
-				items: 1,
-				nav: false,
-				dots: false,
-			},
-			1100: {
-				items: 1,
-				nav: true,
-				dots: false,
-			}
-		}
-	});
+01. Mobile Menu Initialization
+02. Sidebar Toggle
+03. Body Overlay
+04. Sticky Header
+05. Popup for Images and Videos
+06. Counter Animation:
+07. Wow Animation
+08. Custom Select Elements
+09. Active Class Toggle on Hover 
+10. Progress Bar Animation
+11. Swiper Sliders Initializatio
+12. Project Hover Effect
+13. Back to Top Button
+14. Search Popup
+15. Custom Mouse Cursor 
+16. Preloader 
 
 
-	$(".homepage-slides").on("translate.owl.carousel", function () {
-		$(".single-slide-item h1").removeClass("animated fadeInUp").css("opacity", "1");
-		$(".single-slide-item h6").removeClass("animated fadeInDown").css("opacity", "1");
-		$(".single-slide-item p").removeClass("animated fadeInDown").css("opacity", "1");
-		$(".single-slide-item a.main-btn").removeClass("animated fadeInDown").css("opacity", "1");
-	});
+------------------------------------------------------------------*/
 
-	$(".homepage-slides").on("translated.owl.carousel", function () {
-		$(".single-slide-item h1").addClass("animated fadeInUp").css("opacity", "1");
-		$(".single-slide-item h6").addClass("animated fadeInDown").css("opacity", "1");
-		$(".single-slide-item p").addClass("animated fadeInDown").css("opacity", "1");
-		$(".single-slide-item a.main-btn").addClass("animated fadeInDown").css("opacity", "1");
-	});
+(function($) {
+    "use strict";
 
+    $(document).ready(function() {
 
-	// Testimonial Carousel
+        //>> Mobile Menu Js Start <<//
+        $('#mobile-menu').meanmenu({
+            meanMenuContainer: '.mobile-menu',
+            meanScreenWidth: "1199",
+            meanExpand: ['<i class="far fa-plus"></i>'],
+        });
 
-	$('.client-carousel').owlCarousel({
-		items: 1,
-		margin: 30,
-		dots: true,
-		nav: false,
-		loop: true,
-		autoplay: false,
-		responsiveClass: true,
-		responsive: {
-			575: {
-				items: 1,
-				nav: false,
-				dots: false,
-			},
+        //>> Sidebar Toggle Js Start <<//
+        $(".offcanvas__close,.offcanvas__overlay").on("click", function() {
+            $(".offcanvas__info").removeClass("info-open");
+            $(".offcanvas__overlay").removeClass("overlay-open");
+        });
+        $(".sidebar__toggle").on("click", function() {
+            $(".offcanvas__info").addClass("info-open");
+            $(".offcanvas__overlay").addClass("overlay-open");
+        });
 
-			767: {
-				items: 1,
-				nav: false
-			},
+        //>> Body Overlay Js Start <<//
+        $(".body-overlay").on("click", function() {
+            $(".offcanvas__area").removeClass("offcanvas-opened");
+            $(".df-search-area").removeClass("opened");
+            $(".body-overlay").removeClass("opened");
+        });
 
-			990: {
-				items: 2,
-				loop: true,
+        //>> Sticky Header Js Start <<//
+        // $(window).scroll(function() {
+        //     if ($(this).scrollTop() > 250) {
+        //         $("#header-sticky").addClass("sticky");
+        //     } else {
+        //         // $("#header-sticky").removeClass("sticky");
+        //         $("#header-sticky").addClass("sticky");
 
-			},
-			1200: {
-				items: 2,
-				dots: true,
-				loop: true,
-			}
-		}
-	});
+        //     }
+        // });
 
+        //>> Video Popup Start <<//
+        $(".img-popup").magnificPopup({
+            type: "image",
+            gallery: {
+                enabled: true,
+            },
+        });
 
-	// Client Carousel 
+        $('.video-popup').magnificPopup({
+            type: 'iframe',
+            callbacks: {}
+        });
 
-	$('.logo-carousel').owlCarousel({
-		items: 5,
-		margin: 30,
-		dots: false,
-		nav: false,
-		loop: true,
-		autoplay: true,
-		responsive: {
-			0: {
-				items: 2,
-				nav: false,
-				dots: false,
-			},
-			600: {
-				items: 2,
-				nav: false,
-				dots: false,
-			},
-			768: {
-				items: 4,
-				nav: false,
-				dots: false,
-			},
-			1100: {
-				items: 5,
-				nav: false,
-				dots: true,
-			}
-		}
-	})
+        //>> Counterup Start <<//
+        $(".count").counterUp({
+            delay: 15,
+            time: 4000,
+        });
 
-	// Service Slider
+        //>> Wow Animation Start <<//
+        new WOW().init();
 
-	$(".service-item-wrap").owlCarousel({
-		items: 1,
-		margin: 30,
-		dots: true,
-		nav: false,
-		loop: true,
-		autoplay: true,
-		responsiveClass: true,
-		responsive: {
-		  0: {
-			items: 1,
-			nav: false,
-			dots: false,
-		  },
-	
-		  575: {
-			items: 1,
-			nav: false,
-			dots: false,
-		  },
-	
-		  767: {
-			items: 2,
-			nav: false,
-		  },
-	
-		  990: {
-			items: 3,
-			loop: true,
-		  },
-		  1200: {
-			items: 3,
-			dots: true,
-			loop: true,
-		  },
-		},
-	  });
+        //>> Nice Select Start <<//
+        $('select').niceSelect();
 
-	//jQuery Sticky Area 
-	$('.sticky-area').sticky({
-		topSpacing: 0,
-	});
+        //>> Active Js Start <<//
+        $(".team-box-items, .news-box-items").hover(
+            function() {
+                $(".team-box-items, .news-box-items").removeClass("active");
+                $(this).addClass("active");
+            }
+        );
 
-	//Progress Bar JS
+        //>> Progress Bar Js Start <<//
+        $('.progress-bar').waypoint(function() {
+            $('.progress-bar').css({
+                animation: "animate-positive 2.6s",
+                opacity: "1"
+            });
+        }, { offset: '75%' });
 
-	$("#bar1").barfiller({
-		barColor: "#FFD857",
-		duration: 5000,
-	});
+        //>> Hero-3 Slider Start <<//
+        const sliderActive1 = ".hero-slider-2";
+        const sliderInit1 = new Swiper(sliderActive1, {
+            loop: true,
+            slidesPerView: 1,
+            effect: "fade",
+            speed: 2000,
+            autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+            },
+            
+            pagination: {
+                el: ".dot-2",
+                clickable: true,
+            },
+            
+        });
+        // content animation when active start here
+        function animated_swiper(selector, init) {
+             let animated = function animated() {
+                 $(selector + " [data-animation]").each(function () {
+                     let anim = $(this).data("animation");
+                     let delay = $(this).data("delay");
+                     let duration = $(this).data("duration");
+                     $(this)
+                         .removeClass("anim" + anim)
+                         .addClass(anim + " animated")
+                         .css({
+                             webkitAnimationDelay: delay,
+                             animationDelay: delay,
+                             webkitAnimationDuration: duration,
+                             animationDuration: duration,
+                         })
+                         .one("animationend", function () {
+                             $(this).removeClass(anim + " animated");
+                         });
+                 });
+             };
+             animated();
+             init.on("slideChange", function () {
+                 $(sliderActive1 + " [data-animation]").removeClass("animated");
+             });
+             init.on("slideChange", animated);
+        }
+        animated_swiper(sliderActive1, sliderInit1);
 
-	$("#bar2").barfiller({
-		barColor: "#FFD857",
-		duration: 6000,
-	});
+        //>> Hero Slider Start <<//
+        if ($('.hero-slider').length > 0) {
+            const heroSlider = new Swiper(".hero-slider", {
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    prevEl: ".array-prevs",
+                    nextEl: ".array-nexts",
+                },
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 2,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
-	$("#bar3").barfiller({
-		barColor: "#FFD857",
-		duration: 7000,
-	});
+        //>> Service Slider Start <<//
+        if ($('.service-slider').length > 0) {
+            const serviceSlider = new Swiper(".service-slider", {
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".dot",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".array-prev",
+                    prevEl: ".array-next",
+                },
+                breakpoints: {
+                    1399: {
+                        slidesPerView: 4,
+                    },
+                    1199: {
+                        slidesPerView: 3,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
-	$("#bar4").barfiller({
-		barColor: "#FFD857",
-		duration: 5000,
-	});
+        if ($('.service-slider-2').length > 0) {
+            const serviceSlider2 = new Swiper(".service-slider-2", {
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".service-dot",
+                },
+                navigation: {
+                    prevEl: ".array-prev",
+                    nextEl: ".array-next",
+                },
+                breakpoints: {
+                    1399: {
+                        slidesPerView: 4,
+                    },
+                    1199: {
+                        slidesPerView: 3,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
-	$("#bar5").barfiller({
-		barColor: "#FFD857",
-		duration: 6000,
-	});
+        //>> Testimonial Slider Start <<//
+        if ($('.testimonial-slider').length > 0) {
+            const testimonialSlider = new Swiper(".testimonial-slider", {
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".array-prev",
+                    prevEl: ".array-next",
+                },
+            });
+        }
 
-	$("#bar6").barfiller({
-		barColor: "#FFD857",
-		duration: 7000,
-	});
+        if ($('.testimonial-slider-2').length > 0) {
+            const testimonialSlider2 = new Swiper(".testimonial-slider-2", {
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".array-prev",
+                    prevEl: ".array-next",
+                },
+                breakpoints: {
+                    991: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 1,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
-	//Counter Up
+        //>> Project Slider Start <<//
+        if ($('.project-slider').length > 0) {
+            const projectSlider = new Swiper(".project-slider", {
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".project-dot",
+                },
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 3,
+                    },
+                    991: {
+                        slidesPerView: 2,
+                    },
+                    767: {
+                        slidesPerView: 2,
+                    },
+                    575: {
+                        slidesPerView: 1,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
-	$(".counter-number span").counterUp({
-		delay: 10,
-		time: 1000,
-	});
+        //>> Brand Slider Start <<//
+        if ($('.brand-slider').length > 0) {
+            const brandSlider = new Swiper(".brand-slider", {
+                spaceBetween: 30,
+                speed: 2500,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    1199: {
+                        slidesPerView: 5,
+                    },
+                    991: {
+                        slidesPerView: 4,
+                    },
+                    767: {
+                        slidesPerView: 3,
+                    },
+                    575: {
+                        slidesPerView: 2,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                    },
+                },
+            });
+        }
 
-	// magnific popup
+        //>> News Post Slider Start <<//
+        if ($('.news-post-slider').length > 0) {
+            const newsPostSlider = new Swiper(".news-post-slider", { // Corrected variable name from "newsPostPlider"
+                spaceBetween: 30,
+                speed: 2000,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".array-prev",
+                    prevEl: ".array-next",
+                },
+            });
+        }
 
-	  $(".video-play-btn").magnificPopup({
-		type: "iframe",
-	  });
+        //>> Project Hover Js Start <<//
+        const getSlide = $('.main-box, .box').length - 1;
+        const slideCal = 100 / getSlide + '%';
 
+        $('.box').css({
+            "width": slideCal
+        });
 
-	//jQuery Animation  
-	new WOW().init(
+        $('.box').hover(function() {
+            $('.box').removeClass('active');
+            $(this).addClass('active');
+        });
 
-	);
+        //>> Back To Top Start <<//
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 20) {
+                $("#back-top").addClass("show");
+            } else {
+                $("#back-top").removeClass("show");
+            }
+        });
+        $("#back-top").click(function () {
+            $("html, body").animate({ scrollTop: 0 }, 800);
+            return false;
+        });
 
-	// SCROLLTO THE TOP
+        //>> Search Popup Start <<//
+        const $searchWrap = $(".search-wrap");
+        const $navSearch = $(".nav-search");
+        const $searchClose = $("#search-close");
 
-	// Show or hide the sticky footer button
-	$(window).on("scroll", function () {
-		if ($(this).scrollTop() > 6000) {
-			$('.go-top').fadeIn(200);
-		} else {
-			$('.go-top').fadeOut(200);
-		}
-	});
+        $(".search-trigger").on("click", function (e) {
+            e.preventDefault();
+            $searchWrap.animate({ opacity: "toggle" }, 500);
+            $navSearch.add($searchClose).addClass("open");
+        });
 
+        $(".search-close").on("click", function (e) {
+            e.preventDefault();
+            $searchWrap.animate({ opacity: "toggle" }, 500);
+            $navSearch.add($searchClose).removeClass("open");
+        });
 
-	// Animate the scroll to top
-	$('.go-top').on("click", function (event) {
-		event.preventDefault();
+        function closeSearch() {
+            $searchWrap.fadeOut(200);
+            $navSearch.add($searchClose).removeClass("open");
+        }
 
-		$('html, body').animate({
-			scrollTop: 0
-		}, 1500);
-	});
+        $(document.body).on("click", function (e) {
+            closeSearch();
+        });
 
-	// Active & Remove Class 
+        $(".search-trigger, .main-search-input").on("click", function (e) {
+            e.stopPropagation();
+        });
 
-	//	$(".single-serv-item").on("mouseover", function () {
-	//		$(".single-serv-item").removeClass("active");
-	//		$(this).addClass("active");
-	//	});
+        //>> Mouse Cursor Start <<//
+        function mousecursor() {
+            if ($("body")) {
+                const e = document.querySelector(".cursor-inner"),
+                    t = document.querySelector(".cursor-outer");
+                let n,
+                    i = 0,
+                    o = !1;
+                (window.onmousemove = function(s) {
+                    o ||
+                        (t.style.transform =
+                            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+                        (e.style.transform =
+                            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+                        (n = s.clientY),
+                        (i = s.clientX);
+                }),
+                $("body").on("mouseenter", "a, .cursor-pointer", function() {
+                    e.classList.add("cursor-hover");
+                    t.classList.add("cursor-hover");
+                }),
+                $("body").on("mouseleave", "a, .cursor-pointer", function() {
+                    ($(this).is("a") && $(this).closest(".cursor-pointer").length) ||
+                    (e.classList.remove("cursor-hover"),
+                        t.classList.remove("cursor-hover"));
+                }),
+                (e.style.visibility = "visible"),
+                (t.style.visibility = "visible");
+            }
+        }
+        $(function() {
+            mousecursor();
+        });
 
-	$(".single-price-item").on("mouseover", function () {
-		$(".single-price-item").removeClass("active");
-		$(this).addClass("active");
-	});
+    }); // End Document Ready Function
 
-	// Menu Active Color 
+    function loader() {
+        $(window).on('load', function() {
+            // Animate loader off screen
+            $(".preloader").addClass('loaded');
+            $(".preloader").delay(600).fadeOut();
+        });
+    }
 
-	$(".main-menu .navbar-nav .nav-link").on("mouseover", function () {
-		$(".main-menu .navbar-nav .nav-link").removeClass("active");
-		$(this).addClass("active");
-	});
+    loader();
 
-	// Preloader
-	setTimeout(function () {
-		$("#loader").fadeOut(600);
-	}, 200);
+})(jQuery); // End jQuery
 
-	jQuery(window).on("load", function () {
-		jQuery(".site-preloader-wrap, .slide-preloader-wrap").fadeOut(1000);
-	});
-
-
-}(jQuery));

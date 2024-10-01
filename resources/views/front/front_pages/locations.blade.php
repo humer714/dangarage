@@ -168,14 +168,14 @@
         }
 
         /* .product-explorer-main-offerings .product-detail__header {
-                                                                                                margin-bottom: 2rem;
-                                                                                            }
+                                                                                                    margin-bottom: 2rem;
+                                                                                                }
 
-                                                                                            .product-explorer-main-offerings .product-detail__description {
-                                                                                                font-size: .875rem;
-                                                                                                margin: 0.5rem 0;
-                                                                                                padding: 0;
-                                                                                            } */
+                                                                                                .product-explorer-main-offerings .product-detail__description {
+                                                                                                    font-size: .875rem;
+                                                                                                    margin: 0.5rem 0;
+                                                                                                    padding: 0;
+                                                                                                } */
 
         .product-explorer-main-offerings .product-detail__product {
             /* padding: 1rem 1rem 1rem 0; */
@@ -260,21 +260,38 @@
 
 @section('content')
     <!-- Start Bottom Header -->
-    <div class="breadcroumb-area bread-bg">
+    <div class="breadcrumb-wrapper bg-cover"
+        style="background-image: url('{{ asset('front/asset2/img/breadcrumb-bg.jpg') }}');">
+        <div class="shape-image float-bob-y">
+            <img src="{{ asset('front/asset2/img/vector.png') }}" alt="img">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcroumb-title">
-                        <h1>Locations</h1>
-                        <h6><a href="{{ route('home') }}">Home</a> / All Locations</h6>
+            <div class="breadcrumb-wrapper-items">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Locations</h1>
                     </div>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="{{ route('home') }}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                        </li>
+                        <li>
+                            All Locations
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- END Header -->
     <!-- Start portfolio Area -->
-    <div class="service-area service-3 section-padding pt-100">
+    <section class="service-section fix section-padding">
         <div class="container">
             <div class="product-explorer-main-offerings">
                 <div class="product-display">

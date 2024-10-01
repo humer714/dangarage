@@ -11,321 +11,393 @@
 
 
 @section('content')
-    <!-- Start Slider Area -->
-
-    <div class="homepage-slides owl-carousel">
-        <div class="single-slide-item" style="background-image: url('{{ asset('front/asset2/img/slider/slide-1.jpg') }}');">
-            <div class="overlay"></div>
-            <div class="hero-area-content">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".3s">
-                            <div class="section-title">
-                                <h6>Welcome to Fossil</h6>
-                                <h1>Charging Solutions <br>for Electric Vehicle</h1>
-                                <p> Fuel Revolution, in modern history, the process of change from an agrarian <br>and
-                                    handicraft economy to one dominated by fuel and refueling services.</p>
+    <!-- Hero Section Start -->
+    <section class="hero-section fix hero-2">
+        <div class="array-button">
+            <button class="array-prev"><i class="fal fa-arrow-right"></i></button>
+            <button class="array-next"><i class="fal fa-arrow-left"></i></button>
+        </div>
+        <div class="swiper hero-slider-2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider-image bg-cover" style="background-image: url('{{ asset('front/asset2/img/hero/03.jpg') }}');">
+                       
+                    </div>
+                    <div class="container">
+                        <div class="row g-4 align-items-center justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="hero-content text-center">
+                                    <h5 data-animation="fadeInUp" data-delay="1.3s">best Logistic company</h5>
+                                    <h1 data-animation="fadeInUp" data-delay="1.5s">
+                                        Warehouse Solutions <br> for Your Business
+                                    </h1>
+                                    <p data-animation="fadeInUp" data-delay="1.7s">
+                                        Suspendisse volutpat mi sit amet mauris egesta pellentesque. Phasellus vitae magna <br> posuere, feugiat nunc vitae, placera magna. Fusce non rhoncus lectus.
+                                    </p>
+                                    <div class="hero-button">
+                                        <a href="{{ route('about_us') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn hover-white">
+                                            Explore More
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                        <a href="{{ route('contact') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn bg-white">
+                                            Contact Us
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="{{ route('services') }}" class="main-btn">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image bg-cover" style="background-image: url('{{ asset('front/asset2/img/hero/04.jpg') }}');">
+                       
+                    </div>
+                    <div class="container">
+                        <div class="row g-4 align-items-center justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="hero-content text-center">
+                                    <h5 data-animation="fadeInUp" data-delay="1.3s">best Logistic company</h5>
+                                    <h1 data-animation="fadeInUp" data-delay="1.5s">
+                                        Warehouse Solutions <br> for Your Business
+                                    </h1>
+                                    <p data-animation="fadeInUp" data-delay="1.7s">
+                                        Suspendisse volutpat mi sit amet mauris egesta pellentesque. Phasellus vitae magna <br> posuere, feugiat nunc vitae, placera magna. Fusce non rhoncus lectus.
+                                    </p>
+                                    <div class="hero-button">
+                                        <a href="{{ route('about_us') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn hover-white">
+                                            Explore More
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                        <a href="{{ route('contact') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn bg-white">
+                                            Contact Us
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider-image bg-cover" style="background-image: url('{{ asset('front/asset2/img/hero/05.jpg') }}');">
+                       
+                    </div>
+                    <div class="container">
+                        <div class="row g-4 align-items-center justify-content-center">
+                            <div class="col-lg-12">
+                                <div class="hero-content text-center">
+                                    <h5 data-animation="fadeInUp" data-delay="1.3s">best Logistic company</h5>
+                                    <h1 data-animation="fadeInUp" data-delay="1.5s">
+                                        Warehouse Solutions <br> for Your Business
+                                    </h1>
+                                    <p data-animation="fadeInUp" data-delay="1.7s">
+                                        Suspendisse volutpat mi sit amet mauris egesta pellentesque. Phasellus vitae magna <br> posuere, feugiat nunc vitae, placera magna. Fusce non rhoncus lectus.
+                                    </p>
+                                    <div class="hero-button">
+                                        <a href="{{ route('about_us') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn hover-white">
+                                            Explore More
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                        <a href="{{ route('contact') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn bg-white">
+                                            Contact Us
+                                            <i class="fa-solid fa-arrow-right-long"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="single-slide-item hero-area-bg-2"
-            style="background-image: url('{{ asset('front/asset2/img/slider/slide-2.jpg') }}');">
-            <div class="overlay"></div>
-            <div class="hero-area-content">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12 wow fadeInUp animated" data-wow-delay=".3s">
-                            <div class="section-title">
-                                <h6>Since in 1995</h6>
-                                <h1>We are leading <br> <b>Filling Station</b></h1>
-                                <p> Fuel Revolution, in modern history, the process of change from an agrarian <br>and
-                                    handicraft economy to one dominated by fuel and refueling services.</p>
-                            </div>
-                            <a href="{{ route('contact') }}" class="main-btn">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </section>
     <!-- End Slider Area -->
 
 
-    <!-- About Section-->
-
-    <div class="about-area section-padding pt-120">
+    <!-- About Section Start -->
+    <section class="about-section fix section-padding">
+        <div class="about-shape-1 float-bob-x">
+            <img src="{{ asset('front/asset2/img/about/about-shape-1.png') }}" alt="img">
+        </div>
+        <div class="about-shape-2 float-bob-x">
+            <img src="{{ asset('front/asset2/img/about/about-shape-2.png') }}" alt="img">
+        </div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInLeft" data-wow-delay=".3s">
-                    <div class="info-content-area">
-                        <div class="section-title">
-                            <h6>About Us</h6>
-                            <h2>Universal Charging Solutions for Electric Vehicles</h2>
-                        </div>
-                        <p>Since our launch in 1995, our vision and focus has been to deliver high value service for our
-                            clients with the emphasis on communication and attention to detail.</p>
-                        <p class="highlight"><i class="las la-check-circle"></i>From Starting our launch to service with
-                            dignity.</p>
-                        <p class="highlight"><i class="las la-check-circle"></i>We always provide flexible & quality task.
-                        </p>
-                        <p class="highlight"><i class="las la-check-circle"></i>Unique latest machinary used the fuel
-                            supply.</p>
-
-                        <a href="{{ route('about_us') }}" class="main-btn">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay=".4s">
-
-                    <div class="info-img">
-                        <img src="{{ asset('front/asset2/img/about/about.jpg') }}" alt="">
-
-                        <div class="experience-wrap">
-                            <img src="{{ asset('front/asset2/img/electric-station.png') }}" alt="">
-                            <span>25+</span>
-                            <p>Year of Experience</p>
+            <div class="about-wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="{{ asset('front/asset2/img/about/01.jpg') }}" alt="img" class="wow fadeInLeft" data-wow-delay=".2s">
+                            <div class="about-image-2 wow fadeInUp" data-wow-delay=".4s">
+                                <img src="{{ asset('front/asset2/img/about/02.jpg') }}" alt="img">
+                               
+                            </div>
+                            <div class="about-line-shape">
+                                <img src="{{ asset('front/asset2/img/about/about-shape-3.png') }}" alt="img">
+                            </div>
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title">
+                                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>about us<i class="fa-regular fa-arrow-right-long"></i></h6>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">Leading Global Logistic
+                                    And Transport Agency</h2>
+                            </div>
+                            <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
+                                It is a long established fact that a reader will be distracted the readable content of a page when looking at layout the point of using lorem the is Ipsum less normal distribution of letters.
+                            </p>
+                            <ul class="list-items wow fadeInUp" data-wow-delay=".2s">
+                                <li> <i class="fa-solid fa-circle-check"></i>
+                                    We will never compromise the safety of our people 
+                                </li>
+                                <li> <i class="fa-solid fa-circle-check"></i>
+                                    With over four decades of experience providing solutions
+                                </li>
+                                <li> <i class="fa-solid fa-circle-check"></i>
+                                    We see projects through and proactively develop solutions
+                                </li>
+                            </ul>
+                            <div class="about-author">
+                                <div class="author-image wow fadeInUp" data-wow-delay=".2s">
+                                    <img src="{{ asset('front/asset2/img/about/author.png') }}" alt="author-img">
+                                    <div class="content">
+                                        <p>Transko, CEO</p>
+                                        <h4>Brooklyn Simmons</h4>
+                                    </div>
+                                </div>
+                                <img src="{{ asset('front/asset2/img/about/signature.png') }}" alt="img" class="wow fadeInUp" data-wow-delay=".4s">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- ENd About Section-->
 
     <!-- Start Service area -->
-
-    <div class="service-area gray-bg service-3 section-padding pt-100">
+    <section class="service-section fix section-padding bg-cover" style="background-image: url('{{ asset('front/asset2/img/service/service-bg.jpg') }}');">
         <div class="container">
-            <div class="row">
-                <div class="offset-lg-2 col-lg-8 text-center">
-                    <div class="section-title">
-                        <h6>Services</h6>
-                        <h2>Best Service for <br> all type of <b>Electric</b> vehicles</h2>
-                    </div>
-                </div>
+            <div class="section-title text-center">
+                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>Services<i class="fa-regular fa-arrow-right-long"></i></h6>
+                <h2 class="wow fadeInUp text-white" data-wow-delay=".2s">Best Service for<br>
+                    door cleanning</h2>
             </div>
-            <div class="row">
-                @foreach ($services as $item)
-                    @if ($item->status == 1 && $item->is_active == 1)
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                            <div class="service-single wow fadeInLeft animated" data-wow-delay="100ms">
-                                <div class="service-img-wrap">
-                                    <div class="service-thumb">
-                                        <img src="{{ $item->image ?? asset('front/asset2/img/service/3-1.jpg') }}"
-                                            alt="">
-                                    </div>
-                                </div>
-
-                                <div class="service-content">
-                                    <h4>{{ $item->title ?? '' }}</h4>
-                                    <p>
-                                        {{ $item->excerpt ?? '' }}
-                                    </p>
-                                    <a class="main-btn primary" href="{{ route('service_detail', $item->slug) }}">Read
-                                        More</a>
-                                </div>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-
+            <div class="array-button">
+                <button class="array-prev"><i class="fa-regular fa-arrow-left-long"></i></button>
+                <button class="array-next"><i class="fa-regular fa-arrow-right-long"></i></button>
             </div>
         </div>
-    </div>
+        <div class="container-fluid">
+            <div class="swiper service-slider">
+                <div class="swiper-wrapper">
+                    @foreach($services as $key => $item)
+                        @if ($item->status == 1 && $item->is_active == 1)
+                            <div class="swiper-slide">
+                                <div class="service-box-items">
+                                    <div class="service-thumb">
+                                        <img src="{{ $item->image ?? asset('front/asset2/img/service/01.jpg') }}" alt="img">
+                                    </div>
+                                    <div class="service-content">
+                                        <h2 class="number">{{$key + 1 }}</h2>
+                                        <h3><a href="{{ route('service_detail', $item->slug) }}">
+                                            {{ $item->title ?? '' }}</a></h3>
+                                        <p>
+                                            {{ $item->excerpt ?? '' }}
+                                        </p>
+                                        <a href="{{ route('service_detail', $item->slug) }}" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- End Service area -->
 
-    <!-- Start project Area -->
-
-    <div id="xtra" class="xtra-service-wrap section-padding">
+    <!-- Cta Banner Section Start -->
+    <section class="cta-section-2 bg-cover fix" style="background-image: url('{{ asset('front/asset2/img/cta-bg-2.jpg') }}');">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center ">
-                    <div class="section-title">
-                        <h6>Our Projects</h6>
-                        <h2>More <b>Additional</b> Projects in <br> Filling Station</h2>
-                    </div>
+            <div class="cta-banner-wrapper-2">
+                <div class="cta-content">
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Do You Have Any Questions <br> About the Project Plan?</h2>
+                    <a href="{{ route('contact') }}" class="theme-btn wow fadeInUp" data-wow-delay=".4s">
+                        GET IN TOUCH
+                        <i class="fa-regular fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="cta-image wow fadeInUp" data-wow-delay=".3s">
+                    <img src="{{ asset('front/asset2/img/engineer-holding.png') }}" alt="img">
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row">
-                @foreach ($projects as $item)
-                    @if ($item->status == 1 && $item->is_active == 1)
-                        <div class="col-lg-4 col-md-6 col-sm-12 ">
-                            <div class="xtra-serve-area mt-50 wow fadeInLeft" data-wow-delay=".3s">
-                                <a href="{{ route('project_detail', $item->slug) }}">
-                                    <img src="{{ $item->image ?? asset('front/asset2/img/xtra/01.jpg') }}" alt="">
-                                </a>
-                                <a href="{{ route('project_detail', $item->slug) }}">
-                                    <h5>{{ $item->title ?? '' }}</h5>
-                                </a>
-                                <a href="{{ route('project_detail', $item->slug) }}"
-                                    class="read-more">{{ $item->category ?? '' }}</a>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
+    <!-- Start project Area -->
+    <section class="project-section section-padding pt-5 fix">
+        <div class="container">
+            <div class="section-title-area">
+                <div class="section-title">
+                    <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>latest project gallery<i class="fa-regular fa-arrow-right-long"></i></h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Explore Our Project</h2>
+                </div>
+                <a href="{{ route('services') }}" class="theme-btn wow fadeInUp" data-wow-delay=".4s">View all Projects <i class="fa-regular fa-arrow-right"></i></a>
             </div>
         </div>
-    </div>
+        <div class="project-wrapper-2">
+            <div class="swiper project-slider">
+                <div class="swiper-wrapper">
+                    @foreach ($projects as $key => $item)
+                        @if ($item->status == 1 && $item->is_active == 1)
+                            <div class="swiper-slide">
+                                <div class="project-thumb">
+                                    <img src="{{ $item->image ?? asset('front/asset2/img/project/06.jpg') }}" alt="img">
+                                    <div class="project-content">
+                                        <div class="content">
+                                            <h3><a href="{{ route('project_detail', $item->slug) }}">{{ $item->title ?? '' }}</a></h3>
+                                            <span>{{ $item->category ?? '' }}</span>
+                                        </div>
+                                        <h2 class="number">{{$key + 1 }}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="project-dot"></div>
+            </div>
+        </div>
+    </section>
     <!-- End project Area -->
 
     <!-- Testimonial Section -->
-
-    <div class="testimonial-area gray-bg section-padding">
-        <div class="capricorn-testimonial">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center ">
-                        <div class="section-title">
-                            <h6>Testimonial</h6>
-                            <h2>What Our Clients Say About Us</h2>
+    <section class="testimonial-section-2 fix section-padding">
+        <div class="container">
+            <div class="section-title text-center">
+                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>testimonial<i class="fa-regular fa-arrow-right-long"></i></h6>
+                <h2 class="wow fadeInUp" data-wow-delay=".2s">What our client say</h2>
+            </div>
+            <div class="array-button">
+                <button class="array-prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button class="array-next"><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+            <div class="swiper testimonial-slider-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card-items">
+                            <div class="shape-img">
+                                <img src="{{ asset('front/asset2/img/testimonial/shape-left.png') }}" alt="img">
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc viverra laoreet est, a pretium metus aliquam eget. Maecenas porta is nunc ut viverra. Aenean pulvinar maximus leo, non pharetra quam feugiat et. Suspendisse vitae nunc sed ligula.
+                            </p>
+                            <div class="client-info-items">
+                                <div class="client-info">
+                                    <img src="{{ asset('front/asset2/img/testimonial/client-4.png') }}" alt="img">
+                                    <div class="content">
+                                        <h4>Shikhon Islam</h4>
+                                        <span>Web Developer</span>
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="{{ asset('front/asset2/img/testimonial/amazon.png') }}" alt="img">
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="client-carousel owl-carousel">
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Tempore, cum soluta nobis est opio
-                                    cumque nihil impedit quo minus ide
-                                    maxime placeat facere possimus
-                                    nis voluptas assumenda est, omni
-                                    dolor repellendus emoribus autem
-                                    quibusdam et aut officiis.
-                                </p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/1.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Paul Scholes</h5><span>Customer</span>
-                                    </div>
-                                </div>
-
-
+                    <div class="swiper-slide">
+                        <div class="testimonial-card-items style-2">
+                            <div class="shape-img">
+                                <img src="{{ asset('front/asset2/img/testimonial/shape-right.png') }}" alt="img">
                             </div>
-
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Doloremue laudantium totam
-                                    rem aperiam eaque iesa zuae
-                                    ab illo inventore veritatis et ua
-                                    i architecto beatae vitae dicta
-                                    sunt explicabo nemo am voluptatem vitae dicta
-                                    suntruia.enim is
-                                    am voluptatem ruia.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/2.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Monica Lisa</h5><span>Customer</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Nam libero tempore, cum soluta nobi
-                                    est eligendi optio cumque nihil impeit
-                                    quo minus id quod maxime placeat
-                                    facere possimus, omnis voluptas ass
-                                    umenda est, omnis dolor repellendus
-                                    emporibus autem zrosi.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/3.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Ryans Gigs</h5><span>Customer</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc viverra laoreet est, a pretium metus aliquam eget. Maecenas porta is nunc ut viverra. Aenean pulvinar maximus leo, non pharetra quam feugiat et. Suspendisse vitae nunc sed ligula.
+                            </p>
+                            <div class="client-info-items">
+                                <div class="client-info">
+                                    <img src="{{ asset('front/asset2/img/testimonial/client-5.png') }}" alt="img">
+                                    <div class="content">
+                                        <h4>Rony Ahmed</h4>
+                                        <span>Web Development</span>
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Doloremue laudantium totam
-                                    rem aperiam eaque iesa zuae
-                                    ab illo inventore veritatis et ua
-                                    i architecto beatae vitae dicta
-                                    sunt explicabo nemo am voluptatem vitae dicta
-                                    suntruia.enim is
-                                    am voluptatem ruia.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/4.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Sarah Fatima</h5><span>Customer</span>
-                                    </div>
-                                </div>
+                                <img src="{{ asset('front/asset2/img/testimonial/envato.png') }}" alt="img">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- End Testimonial Section -->
 
     <!--Blog Area Start-->
-
-    <div class="blog-area gray-bg section-padding mb-3">
+    <section class="news-section fix section-padding pt-0">
+        <div class="shape-3 float-bob-y">
+            <img src="{{ asset('front/asset2/img/news/shape-3.png') }}" alt="img">
+        </div>
+        <div class="shape-4 float-bob-y">
+            <img src="{{ asset('front/asset2/img/news/shape-4.png') }}" alt="img">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-12">
-                    <div class="section-title">
-                        <h6>Blog</h6>
-                        <h2>Latest <b>News</b> & <b>Blogs</b></h2>
-                    </div>
+            <div class="section-title-area">
+                <div class="section-title">
+                    <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>Blog & News<i class="fa-regular fa-arrow-right-long"></i></h6>
+                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Latest News & Blog</h2>
                 </div>
-
-                <div class="col-lg-6 text-end">
-
-                </div>
+                <a href="news-grid.html" class="theme-btn wow fadeInUp" data-wow-delay=".5s">View all post <i class="fa-regular fa-arrow-right"></i></a>
             </div>
             <div class="row">
                 @foreach ($blogs as $item)
                     @if ($item->status == 1 && $item->is_active == 1)
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="single-blog-item wow fadeInLeft" data-wow-delay=".4s">
-                                <div class="blog-bg">
-                                    <a href="{{ route('blog_detail', $item->slug) }}">
-                                        <img src="{{ $item->image ?? asset('front/asset2/img/blog/1.jpg') }}"
-                                            alt="">
-                                    </a>
-                                </div>
-                                <div class="blog-content">
-                                    <p class="blog-meta"><i class="las la-user-circle"></i>Admin | <i
-                                            class="las la-calendar-check"></i>{{ $item->created_at ? $item->created_at->format('d F, Y') : '' }}
-                                    </p>
-                                    <h5><a href="{{ route('blog_detail', $item->slug) }}">{{ $item->title ?? '' }}</a>
-                                    </h5>
-                                    <p>{{ $item->excerpt ?? '' }}</p>
-                                    <a href="{{ route('blog_detail', $item->slug) }}" class="read-more">Read More</a>
-                                </div>
 
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="news-box-items">
+                                <div class="news-image">
+                                    <img src="{{ $item->image ?? asset('front/asset2/img/news/04.jpg') }}" alt="img">
+                                    <img src="{{ $item->image ?? asset('front/asset2/img/news/04.jpg') }}" alt="img">
+                                </div>
+                                <div class="news-content">
+                                    <ul class="post-list">
+                                        <li>{{ $item->category ?? '' }}</li>
+                                        <li>{{ $item->created_at ? $item->created_at->format('d F, Y') : '' }}</li>
+                                    </ul>
+                                    <h4><a href="{{ route('blog_detail', $item->slug) }}">{{ $item->title ?? '' }}</a></h4>
+                                    <div class="author-items">
+                                        <div class="author-info">
+                                            <div class="content">
+                                                <h6>Admin</h6>
+                                            </div>
+                                        </div>
+                                        <a href="{{ route('blog_detail', $item->slug) }}" class="link-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     @endif
                 @endforeach
             </div>
         </div>
-    </div>
-
-
+    </section>
 
     <!--End of Blog Area-->
 @endsection

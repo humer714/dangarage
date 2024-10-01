@@ -13,41 +13,64 @@
 
 @section('content')
     <!-- Start Bottom Header -->
-    <div class="breadcroumb-area bread-bg">
+    <div class="breadcrumb-wrapper bg-cover"
+        style="background-image: url('{{ asset('front/asset2/img/breadcrumb-bg.jpg') }}');">
+        <div class="shape-image float-bob-y">
+            <img src="{{ asset('front/asset2/img/vector.png') }}" alt="img">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcroumb-title">
-                        <h1>Projects</h1>
-                        <h6><a href="{{ route('home') }}">Home</a> / All Projects</h6>
+            <div class="breadcrumb-wrapper-items">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Projects</h1>
                     </div>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="{{ route('home') }}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                        </li>
+                        <li>
+                            All Projects
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- END Header -->
-    <!-- Start portfolio Area -->
-    <div id="xtra" class="xtra-service-wrap section-padding">
+
+    <!-- Project Section Start -->
+    <section class="project-section section-padding fix">
         <div class="container">
-            <div class="row">
+            <div class="row g-4">
                 @foreach ($projects as $item)
                     @if ($item->status == 1)
-                        <div class="col-lg-4 col-md-6 col-sm-12 ">
-                            <div class="xtra-serve-area mt-50 wow fadeInLeft" data-wow-delay=".3s">
-                                <a href="{{ route('project_detail', $item->slug) }}">
-                                    <img src="{{ $item->image ?? asset('front/asset2/img/xtra/01.jpg') }}" alt="">
-                                </a>
-                                <a href="{{ route('project_detail', $item->slug) }}">
-                                    <h5>{{ $item->title ?? '' }}</h5>
-                                </a>
-                                <a href="{{ route('project_detail', $item->slug) }}"
-                                    class="read-more">{{ $item->category ?? '' }}</a>
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="project-card-items">
+                                <div class="project-image">
+                                    <img src="{{ $item->image ?? asset('front/asset2/img/xtra/01.jpg') }}" alt="img">
+                                    <img src="{{ $item->image ?? asset('front/asset2/img/xtra/01.jpg') }}" alt="img">
+                                </div>
+                                <div class="project-content">
+                                    <h3><a href="{{ route('project_detail', $item->slug) }}">{{ $item->title ?? '' }}</a>
+                                    </h3>
+                                    <p>
+                                        {{ $item->category ?? '' }}
+                                    </p>
+                                </div>
+                                <div class="shape-img">
+                                    <img src="{{ asset('front/asset2/img/project/shape.png') }}" alt="img">
+                                </div>
                             </div>
                         </div>
                     @endif
                 @endforeach
             </div>
         </div>
-    </div>
-    <!-- End portfolio Area -->
+    </section>
+    <!-- Project Section End -->
 @endsection

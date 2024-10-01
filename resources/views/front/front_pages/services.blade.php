@@ -13,14 +13,30 @@
 
 @section('content')
     <!-- Start Bottom Header -->
-    <div class="breadcroumb-area bread-bg">
+    <div class="breadcrumb-wrapper bg-cover"
+        style="background-image: url('{{ asset('front/asset2/img/breadcrumb-bg.jpg') }}');">
+        <div class="shape-image float-bob-y">
+            <img src="{{ asset('front/asset2/img/vector.png') }}" alt="img">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcroumb-title">
-                        <h1>Services</h1>
-                        <h6><a href="{{ route('home') }}">Home</a> / All Services</h6>
+            <div class="breadcrumb-wrapper-items">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">Services</h1>
                     </div>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="{{ route('home') }}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                        </li>
+                        <li>
+                            All Services
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -28,28 +44,31 @@
 
     <!-- END Header -->
     <!-- Start Service area -->
-
-    <div id="service-page" class="service-details-section section-padding pb-0 mb-3">
+    <section class="service-section fix section-padding">
         <div class="container">
+            <div class="section-title text-center">
+                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>WHAT WE OFFER<i
+                        class="fa-regular fa-arrow-right-long"></i></h6>
+                <h2 class="wow fadeInUp" data-wow-delay=".2s">Create the building <br> you want here</h2>
+            </div>
             <div class="row">
-                @foreach ($services as $item)
-                    @if ($item->status == 1 && $item->is_active == 1)
-                        <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                            <div class="service-single wow fadeInLeft animated" data-wow-delay="100ms">
-                                <div class="service-img-wrap">
-                                    <div class="service-thumb">
-                                        <img src="{{ $item->image ?? asset('front/asset2/img/service/3-1.jpg') }}"
-                                            alt="">
-                                    </div>
+                @foreach ($services as $key => $item)
+                    @if ($item->status == 1)
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="service-box-items items-bg">
+                                <div class="service-thumb">
+                                    <img src="{{ $item->image ?? asset('front/asset2/img/service/01.jpg') }}"
+                                        alt="img">
                                 </div>
-
                                 <div class="service-content">
-                                    <h4>{{ $item->title ?? '' }}</h4>
+                                    <h2 class="number">{{ $key + 1 }}</h2>
+                                    <h3><a href="{{ route('service_detail', $item->slug) }}">{{ $item->title ?? '' }}</a>
+                                    </h3>
                                     <p>
                                         {{ $item->excerpt ?? '' }}
                                     </p>
-                                    <a class="main-btn primary" href="{{ route('service_detail', $item->slug) }}">Read
-                                        More</a>
+                                    <a href="{{ route('service_detail', $item->slug) }}" class="link-btn">Explore More <i
+                                            class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -57,9 +76,8 @@
                 @endforeach
 
             </div>
+
         </div>
-    </div>
-
+    </section>
     <!-- End Service area -->
-
 @endsection

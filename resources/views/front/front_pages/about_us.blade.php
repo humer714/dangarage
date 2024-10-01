@@ -13,15 +13,30 @@
 
 @section('content')
     <!-- Start Bottom Header -->
-
-    <div class="breadcroumb-area bread-bg">
+    <div class="breadcrumb-wrapper bg-cover"
+        style="background-image: url('{{ asset('front/asset2/img/breadcrumb-bg.jpg') }}');">
+        <div class="shape-image float-bob-y">
+            <img src="{{ asset('front/asset2/img/vector.png') }}" alt="img">
+        </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcroumb-title">
-                        <h1>About Us</h1>
-                        <h6><a href="{{ route('home') }}">Home</a> / About Us</h6>
+            <div class="breadcrumb-wrapper-items">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">About Us</h1>
                     </div>
+                    <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="{{ route('home') }}">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                        </li>
+                        <li>
+                            About Us
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -30,240 +45,221 @@
     <!-- END Header -->
 
     <!-- About Section -->
-
-    <div class="about-area sky-bg section-padding">
+    <section class="about-section fix section-padding">
         <div class="container">
-            <div class="row gx-0">
-                <div class="col-lg-5">
-                    <div class="mt-10"></div>
-                    <div class="about-bg-wrapper wow fadeInUp" data-wow-delay=".2s">
-                        <div class="about-bg-innner bg-cover"></div>
+            <div class="about-wrapper">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="{{ asset('front/asset2/img/about/01.jpg') }}" alt="img" class="wow fadeInLeft"
+                                data-wow-delay=".2s">
+                            <div class="about-image-2 wow fadeInUp" data-wow-delay=".4s">
+                                <img src="{{ asset('front/asset2/img/about/02.jpg') }}" alt="img">
+
+                            </div>
+                            <div class="about-line-shape">
+                                <img src="{{ asset('front/asset2/img/about/about-shape-3.png') }}" alt="img">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="about-content-wrapper wow fadeInUp" data-wow-delay=".4s">
-                        <div class="section-title">
-                            <h6>About Us</h6>
-                            <h2>We're the Top <br><b>Filling Station</b> in Downdown</h2>
-                        </div>
-                        <p>Fuel ennovation for freight plan Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-                            natus ipsam ea vero placeat? Quia consequuntur odio nemo incidunt, perferendis. </p>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="key-feature">
-                                    <div class="row gx-0">
-                                        <div class="col-lg-4">
-                                            <div class="about-icon">
-                                                <img src="{{ asset('front/asset2/img/icon/oil.png') }}" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <h4>100% Pure Oil</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                        </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title">
+                                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>about us<i
+                                        class="fa-regular fa-arrow-right-long"></i></h6>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">Leading Global Logistic
+                                    And Transport Agency</h2>
+                            </div>
+                            <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
+                                It is a long established fact that a reader will be distracted the readable content of a
+                                page when looking at layout the point of using lorem the is Ipsum less normal distribution
+                                of letters.
+                            </p>
+                            <ul class="list-items wow fadeInUp" data-wow-delay=".2s">
+                                <li> <i class="fa-solid fa-circle-check"></i>
+                                    We will never compromise the safety of our people
+                                </li>
+                                <li> <i class="fa-solid fa-circle-check"></i>
+                                    With over four decades of experience providing solutions
+                                </li>
+                                <li> <i class="fa-solid fa-circle-check"></i>
+                                    We see projects through and proactively develop solutions
+                                </li>
+                            </ul>
+                            <div class="about-author">
+                                <div class="author-image wow fadeInUp" data-wow-delay=".2s">
+                                    <img src="{{ asset('front/asset2/img/about/author.png') }}" alt="author-img">
+                                    <div class="content">
+                                        <p>Transko, CEO</p>
+                                        <h4>Brooklyn Simmons</h4>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="key-feature">
-                                    <div class="row gx-0">
-                                        <div class="col-lg-4">
-                                            <div class="about-icon">
-                                                <img src="{{ asset('front/asset2/img/icon/meter-checker.png') }}"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12">
-                                            <h4>Accurate Meter</h4>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <img src="{{ asset('front/asset2/img/about/signature.png') }}" alt="img"
+                                    class="wow fadeInUp" data-wow-delay=".4s">
                             </div>
                         </div>
-                        <hr>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--Achievement Section-->
-
-    <div class="achievement-area">
-        <div class="overlay-2"></div>
+    <section class="achivements-section fix">
         <div class="container">
-            <div class="row gy-5">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-counter-box wow fadeInLeft" data-wow-delay=".2s">
-                        <p class="counter-number"><span>2150</span>+</p>
-                        <h6>Satisfied Client</h6>
-                    </div>
+            <div class="achivements-wrapper-2 section-padding">
+                <div class="bg-shape">
+                    <img src="{{ asset('front/asset2/img/achivements-shape.png') }}" alt="img">
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-counter-box wow fadeInLeft" data-wow-delay=".4s">
-                        <p class="counter-number"><span>132</span></p>
-                        <h6>Worldwide Branches</h6>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="achivements-content">
+                            <div class="section-title">
+                                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>ACHIVEMENTS<i
+                                        class="fa-regular fa-arrow-right-long"></i></h6>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">Industrial Power, <br> Worldwide Influence
+                                </h2>
+                            </div>
+                            <a href="{{ route('contact') }}" class="theme-btn bg-white mt-3 mt-md-0 wow fadeInUp"
+                                data-wow-delay=".4s">
+                                Contact Us
+                                <i class="fa-regular fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-counter-box wow fadeInLeft" data-wow-delay=".6s ">
-                        <p class="counter-number"><span>55</span></p>
-                        <h6>Countries Covered</h6>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="single-counter-box wow fadeInLeft" data-wow-delay=".8s">
-                        <p class="counter-number"><span>4.8</span></p>
-                        <h6>Review</h6>
+                    <div class="col-lg-6">
+                        <div class="achivements-right-items">
+                            <div class="border-shape">
+                                <img src="{{ asset('front/asset2/img/border.png') }}" alt="img">
+                            </div>
+                            <div class="achivements-item">
+                                <div class="counter-items wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="icon">
+                                        <img src="{{ asset('front/asset2/img/icon/21.svg') }}" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h2><span class="count">45</span>k+</h2>
+                                        <p>project Complete</p>
+                                    </div>
+                                </div>
+                                <div class="counter-items wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="icon">
+                                        <img src="{{ asset('front/asset2/img/icon/22.svg') }}" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h2><span class="count">25</span>k+</h2>
+                                        <p>Active On Clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="achivements-item">
+                                <div class="counter-items style-2 wow fadeInUp" data-wow-delay=".2s">
+                                    <div class="icon">
+                                        <img src="{{ asset('front/asset2/img/icon/23.svg') }}" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h2><span class="count">2.5</span>+</h2>
+                                        <p>Experience Team</p>
+                                    </div>
+                                </div>
+                                <div class="counter-items style-2 wow fadeInUp" data-wow-delay=".4s">
+                                    <div class="icon">
+                                        <img src="{{ asset('front/asset2/img/icon/24.svg') }}" alt="img">
+                                    </div>
+                                    <div class="content">
+                                        <h2><span class="count">2.4</span>k+</h2>
+                                        <p>Winning Awards</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="man-image float-bob-x ">
+            <img src="{{ asset('front/asset2/img/man.png') }}" alt="img">
+        </div>
+    </section>
 
     <!-- Choose Us Section -->
 
-    <div class="chooseus-area section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="section-title">
-                        <h6>Best Feature</h6>
-                        <h2 class="section-heading">Great Experience of<b> <br>Vehicle</b> Services</h2>
-                    </div>
-                    <p class="highlight mb-20">The Most Popular courier & delivery service provider. We are served domestic
-                        and over world wide.</p>
-                    <div class="single-feature-item wow fadeInUp" data-wow-delay=".2s">
-                        <div class="num"><i class="las la-external-link-alt"></i></div>
-                        <div class="feature-content">
-                            <h5>Free Estimate</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta et doloribus, omnis!</p>
-                        </div>
-                    </div>
-                    <div class="single-feature-item wow fadeInUp" data-wow-delay=".4s">
-                        <div class="num"><i class="las la-external-link-alt"></i></div>
-                        <div class="feature-content">
-                            <h5>24/7 Services</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta et doloribus, omnis!</p>
-                        </div>
-                    </div>
-                    <div class="single-feature-item wow fadeInUp" data-wow-delay=".6s">
-                        <div class="num"><i class="las la-external-link-alt"></i></div>
-                        <div class="feature-content">
-                            <h5>Flat Rate Fees</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta et doloribus, omnis!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="feature-img wow fadeInUp" data-wow-delay=".6s">
-                        <img src="{{ asset('front/asset2/img/feature.jpg') }}" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <!-- Testimonial Section -->
-
-    <div class="testimonial-area dark-bg section-padding">
-        <div class="capricorn-testimonial">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center ">
-                        <div class="section-title">
-                            <h6>Testimonial</h6>
-                            <h2 class="text-white">What Our Clients Say About Us</h2>
+    <section class="testimonial-section-2 fix section-padding">
+        <div class="container">
+            <div class="section-title text-center">
+                <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>testimonial<i
+                        class="fa-regular fa-arrow-right-long"></i></h6>
+                <h2 class="wow fadeInUp" data-wow-delay=".2s">What our client say</h2>
+            </div>
+            <div class="array-button">
+                <button class="array-prev"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button class="array-next"><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+            <div class="swiper testimonial-slider-2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="testimonial-card-items">
+                            <div class="shape-img">
+                                <img src="{{ asset('front/asset2/img/testimonial/shape-left.png') }}" alt="img">
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc viverra laoreet est, a
+                                pretium metus aliquam eget. Maecenas porta is nunc ut viverra. Aenean pulvinar maximus leo,
+                                non pharetra quam feugiat et. Suspendisse vitae nunc sed ligula.
+                            </p>
+                            <div class="client-info-items">
+                                <div class="client-info">
+                                    <img src="{{ asset('front/asset2/img/testimonial/client-4.png') }}" alt="img">
+                                    <div class="content">
+                                        <h4>Shikhon Islam</h4>
+                                        <span>Web Developer</span>
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img src="{{ asset('front/asset2/img/testimonial/amazon.png') }}" alt="img">
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="client-carousel owl-carousel">
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Tempore, cum soluta nobis est opio
-                                    cumque nihil impedit quo minus ide
-                                    maxime placeat facere possimus
-                                    nis voluptas assumenda est, omni
-                                    dolor repellendus emoribus autem
-                                    quibusdam et aut officiis.
-                                </p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/1.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Paul Scholes</h5><span>Customer</span>
-                                    </div>
-                                </div>
-
-
+                    <div class="swiper-slide">
+                        <div class="testimonial-card-items style-2">
+                            <div class="shape-img">
+                                <img src="{{ asset('front/asset2/img/testimonial/shape-right.png') }}" alt="img">
                             </div>
-
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Doloremue laudantium totam
-                                    rem aperiam eaque iesa zuae
-                                    ab illo inventore veritatis et ua
-                                    i architecto beatae vitae dicta
-                                    sunt explicabo nemo am voluptatem vitae dicta
-                                    suntruia.enim is
-                                    am voluptatem ruia.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/2.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Monica Lisa</h5><span>Customer</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Nam libero tempore, cum soluta nobi
-                                    est eligendi optio cumque nihil impeit
-                                    quo minus id quod maxime placeat
-                                    facere possimus, omnis voluptas ass
-                                    umenda est, omnis dolor repellendus
-                                    emporibus autem zrosi.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/3.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Ryans Gigs</h5><span>Customer</span>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc viverra laoreet est, a
+                                pretium metus aliquam eget. Maecenas porta is nunc ut viverra. Aenean pulvinar maximus leo,
+                                non pharetra quam feugiat et. Suspendisse vitae nunc sed ligula.
+                            </p>
+                            <div class="client-info-items">
+                                <div class="client-info">
+                                    <img src="{{ asset('front/asset2/img/testimonial/client-5.png') }}" alt="img">
+                                    <div class="content">
+                                        <h4>Rony Ahmed</h4>
+                                        <span>Web Development</span>
+                                        <div class="star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="single-client-item">
-                                <div class="testimonial-icon"><i class="las la-quote-left"></i></div>
-                                <p>Doloremue laudantium totam
-                                    rem aperiam eaque iesa zuae
-                                    ab illo inventore veritatis et ua
-                                    i architecto beatae vitae dicta
-                                    sunt explicabo nemo am voluptatem vitae dicta
-                                    suntruia.enim is
-                                    am voluptatem ruia.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-img">
-                                        <img src="{{ asset('front/asset2/img/testimonial/4.jpg') }}" alt="">
-                                    </div>
-                                    <div class="author-desc">
-                                        <h5>Sarah Fatima</h5><span>Customer</span>
-                                    </div>
-                                </div>
+                                <img src="{{ asset('front/asset2/img/testimonial/envato.png') }}" alt="img">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- End Testimonial Section -->
 @endsection
