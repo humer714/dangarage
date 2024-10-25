@@ -11,6 +11,117 @@
 @endsection
 
 @section('content')
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<style>
+    .contact-info-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 40px 30px;
+        background: var(--white);
+        border-radius: 100px;
+    }
+
+    .contact-info-area .contact-info-items {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .contact-info-area .contact-info-items .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        background-color: var(--white);
+        border-radius: 50%;
+        color: var(--theme);
+        border: 1px solid var(--border);
+        font-size: 24px;
+    }
+
+    .contact-wrapper .contact-content .icon-items .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 63px;
+        height: 63px;
+        background-color: transparent;
+        border-radius: 50%;
+        color: var(--theme);
+        border: 1px solid var(--white);
+        font-size: 24px;
+    }
+
+    /* .contact-wrapper .contact-content .icon-items .icon {
+    width: 63px;
+    height: 63px;
+    line-height: 63px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    text-align: center;
+} */
+
+    .fab {
+        line-height: 32px;
+    }
+
+    .service-thumb img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        /* Ensures that images don't stretch */
+    }
+
+    .swiper-container {
+        overflow: hidden;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .service-box-items {
+        width: 100%;
+        max-width: 600px;
+        /* Adjust as per your need */
+        margin: 0 auto;
+        padding: 15px;
+        /* Padding for card */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* For better card visibility */
+        /* Add max-height */
+        /* max-height: 400px; */
+        /* Adjust as per your need */
+    }
+
+    .swiper-pagination {
+        bottom: 60px !important;
+        /* Space the pagination */
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #000;
+        /* Arrow color */
+        top: 64%;
+    }
+</style>
+
+
 <div class="breadcrumb-wrapper bg-cover"
     style="background-image: url('{{ $detail_data->image ?? asset('front/asset2/img/breadcrumb-bg.jpg') }}');">
     <div class="shape-image float-bob-y">
@@ -73,7 +184,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="service-card-items"style="position: relative;">
+                    <div class="service-card-items" style="position: relative;">
                         <div class="tag-img" style="position: absolute; top: 0px; right: 0px; z-index: 10;">
                             <img src="{{ asset('front/asset2/img/tag.png')}}" alt="img">
                         </div>
@@ -159,39 +270,54 @@
 <section class="service-section fix section-padding">
     <div class="container">
         <div class="section-title text-center">
-            <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>Our Services<i
-                    class="fa-regular fa-arrow-right-long"></i></h6>
-            <h2 class="wow fadeInUp" data-wow-delay=".2s">Comprehensive garage door services for installation, repair,
-                and maintenance to<br> ensure reliable operation</h2>
+            <h6 class="wow fadeInUp">
+                <i class="fa-regular fa-arrow-left-long"></i>Our Services
+                <i class="fa-regular fa-arrow-right-long"></i>
+            </h6>
+            <h2 class="wow fadeInUp" data-wow-delay=".2s">
+                Comprehensive Garage Door Services For Installation, Repair, And Maintenance To<br>
+                Ensure Reliable Operation
+            </h2>
         </div>
-        <div class="row">
-            @foreach ($services as $key => $item)
-            @if ($item->status == 1 && $item->is_active == 1)
-            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                <div class="service-box-items items-bg">
-                    <div class="service-thumb">
-                        <img src="{{ $item->image ?? asset('front/asset2/img/service/01.jpg') }}"
-                            alt="img">
-                    </div>
-                    <div class="service-content">
-                        <h2 class="number">{{ $key + 1 }}</h2>
-                        <h3><a href="{{ route('service_detail', $item->slug) }}">{{ $item->title ?? '' }}</a>
-                        </h3>
-                        <p>
-                            {{ $item->excerpt ?? '' }}
-                        </p>
-                        <a href="{{ route('service_detail', $item->slug) }}" class="link-btn">Explore More <i
-                                class="fa-solid fa-arrow-right"></i></a>
+        <!-- Swiper Container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                @foreach ($services as $key => $item)
+                @if ($item->status == 1 && $item->is_active == 1)
+                <div class="swiper-slide">
+                    <div class="service-box-items items-bg">
+                        <div class="service-thumb">
+                            <img src="{{ $item->image ?? asset('front/asset2/img/service/01.jpg') }}" alt="img">
+                        </div>
+                        <div class="service-content">
+                            <h2 class="number">{{ $key + 1 }}</h2>
+                            <h3>
+                                <a href="{{ route('service_detail', $item->slug) }}">{{ $item->title ?? '' }}</a>
+                            </h3>
+                            <p>{{ $item->excerpt ?? '' }}</p>
+                            <a href="{{ route('service_detail', $item->slug) }}" class="link-btn">
+                                Explore More <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                @endif
+                @endforeach
             </div>
-            @endif
-            @endforeach
 
+            <!-- Add Pagination if needed -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Add Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-
     </div>
 </section>
+
+
+
+
 <!-- End Service area -->
 
 <section class="service-details-section mb-3">
@@ -293,7 +419,7 @@
 
 
 <!-- Start Map -->
-<div class="map-area-top">
+<div class="map-area-top p-4">
     <div class="container-full">
         <div class="row">
             <!-- Start contact icon column -->
@@ -312,4 +438,38 @@
     </div>
 </div>
 <!-- end map -->
+
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        slidesPerView: 1, // Initially show 1 slide on small screens
+        spaceBetween: 30, // Space between slides
+        autoplay: {
+            delay: 3000, // Automatically change slides every 3 seconds
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // Enable pagination dots to be clickable
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1, // 1 slide per view on small devices
+            },
+            768: {
+                slidesPerView: 2, // 2 slides per view on tablets
+            },
+            1024: {
+                slidesPerView: 3, // 3 slides per view on larger screens (like your current design)
+            },
+        }
+    });
+</script>
+
+
+
 @endsection
