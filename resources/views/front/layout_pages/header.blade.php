@@ -4,6 +4,9 @@
         position: fixed;
     }
 </style>
+<!--<< Mouse Cursor Start >>-->
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
 <header class="header-section-22">
     <div id="header-sticky" class="header-1 sticky">
         <div class="container-fluid">
