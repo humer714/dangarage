@@ -27,12 +27,12 @@
                         <div class="row g-4 align-items-center justify-content-center">
                             <div class="col-lg-12">
                                 <div class="hero-content text-center">
-                                    <h5 data-animation="fadeInUp" data-delay="1.3s">best Logistic company</h5>
+                                    <h5 data-animation="fadeInUp" data-delay="1.3s">Best Garage Door Company</h5>
                                     <h1 data-animation="fadeInUp" data-delay="1.5s">
-                                        Warehouse Solutions <br> for Your Business
+                                    Garage Door Solutions For  <br>  Your Business
                                     </h1>
                                     <p data-animation="fadeInUp" data-delay="1.7s">
-                                        Suspendisse volutpat mi sit amet mauris egesta pellentesque. Phasellus vitae magna <br> posuere, feugiat nunc vitae, placera magna. Fusce non rhoncus lectus.
+                                    Reliable garage door solutions tailored for businesses. From installations to repairs,  <br>  we ensure security and functionality for your commercial needs.
                                     </p>
                                     <div class="hero-button">
                                         <a href="{{ route('about_us') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn hover-white">
@@ -57,12 +57,12 @@
                         <div class="row g-4 align-items-center justify-content-center">
                             <div class="col-lg-12">
                                 <div class="hero-content text-center">
-                                    <h5 data-animation="fadeInUp" data-delay="1.3s">best Logistic company</h5>
+                                    <h5 data-animation="fadeInUp" data-delay="1.3s">Fix Garage Door Broken Springs</h5>
                                     <h1 data-animation="fadeInUp" data-delay="1.5s">
-                                        Warehouse Solutions <br> for Your Business
+                                        Broken Garage Door Spring Repair <br>  Fast Service
                                     </h1>
                                     <p data-animation="fadeInUp" data-delay="1.7s">
-                                        Suspendisse volutpat mi sit amet mauris egesta pellentesque. Phasellus vitae magna <br> posuere, feugiat nunc vitae, placera magna. Fusce non rhoncus lectus.
+                                        Need to fix broken garage door springs? We offer fast, reliable repair services <br>  to restore your garage door’s functionality. Call now!
                                     </p>
                                     <div class="hero-button">
                                         <a href="{{ route('about_us') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn hover-white">
@@ -87,12 +87,12 @@
                         <div class="row g-4 align-items-center justify-content-center">
                             <div class="col-lg-12">
                                 <div class="hero-content text-center">
-                                    <h5 data-animation="fadeInUp" data-delay="1.3s">best Logistic company</h5>
+                                    <h5 data-animation="fadeInUp" data-delay="1.3s">Dan Garage Door Specialist</h5>
                                     <h1 data-animation="fadeInUp" data-delay="1.5s">
-                                        Warehouse Solutions <br> for Your Business
+                                    Dan Garage Door 24/7 | Reliable Services  <br>  Anytime
                                     </h1>
                                     <p data-animation="fadeInUp" data-delay="1.7s">
-                                        Suspendisse volutpat mi sit amet mauris egesta pellentesque. Phasellus vitae magna <br> posuere, feugiat nunc vitae, placera magna. Fusce non rhoncus lectus.
+                                    Dan Garage Door 24/7 offers round-the-clock garage door repair,  <br>  installation, and maintenance. Always available when you need us!
                                     </p>
                                     <div class="hero-button">
                                         <a href="{{ route('about_us') }}" data-animation="fadeInUp" data-delay="1.9s" class="theme-btn hover-white">
@@ -142,21 +142,20 @@
                         <div class="about-content">
                             <div class="section-title">
                                 <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>about us<i class="fa-regular fa-arrow-right-long"></i></h6>
-                                <h2 class="wow fadeInUp" data-wow-delay=".2s">Leading Global Logistic
-                                    And Transport Agency</h2>
+                                <h2 class="wow fadeInUp" data-wow-delay=".2s">Leading Local Garage Door Spring Repair Service</h2>
                             </div>
                             <p class="mt-3 mt-md-0 wow fadeInUp" data-wow-delay=".4s">
-                                It is a long established fact that a reader will be distracted the readable content of a page when looking at layout the point of using lorem the is Ipsum less normal distribution of letters.
+                            Dan Garage Door Broken Spring Repair is a trusted local service specializing in fast, reliable repair of broken garage door springs. Our expert team ensures safe, efficient solutions to restore your garage door’s functionality.
                             </p>
                             <ul class="list-items wow fadeInUp" data-wow-delay=".2s">
                                 <li> <i class="fa-solid fa-circle-check"></i>
-                                    We will never compromise the safety of our people 
+                                We will never compromise the safety of your garage door. 
                                 </li>
                                 <li> <i class="fa-solid fa-circle-check"></i>
-                                    With over four decades of experience providing solutions
+                                With over four decades of experience in spring repair solutions.
                                 </li>
                                 <li> <i class="fa-solid fa-circle-check"></i>
-                                    We see projects through and proactively develop solutions
+                                We complete repairs promptly and proactively address any issues.
                                 </li>
                             </ul>
                             <div class="about-author">
@@ -184,7 +183,7 @@
             <div class="section-title text-center">
                 <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>Services<i class="fa-regular fa-arrow-right-long"></i></h6>
                 <h2 class="wow fadeInUp text-white" data-wow-delay=".2s">Best Service for<br>
-                    door cleanning</h2>
+                garage door</h2>
             </div>
             <div class="array-button">
                 <button class="array-prev"><i class="fa-regular fa-arrow-left-long"></i></button>
@@ -230,10 +229,10 @@
                             <div class="achivements-content">
                                 <div class="section-title">
                                     <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>ACHIVEMENTS<i class="fa-regular fa-arrow-right-long"></i></h6>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Let's Get Started We are <br> now Transport a dream.</h2>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".2s">Let’s Get Started  We<br> are now repairing your garage door dreams.</h2>
                                 </div>
                                 <p class="mt-3 mt-md-0 wow fadeInUp">
-                                    It is a long established fact that a reader will be distracted the readable content of a page when looking at layout the point of using lorem the is Ipsum less Transko normal distribution of letters.
+                                At Dan Garage Door Broken Spring Repair, we turn your garage door issues into solutions. Our expert team provides fast, reliable repairs, ensuring your garage door functions smoothly and safely, every time.
                                 </p>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
@@ -371,13 +370,13 @@
                                 <img src="{{ asset('front/asset2/img/testimonial/shape-left.png') }}" alt="img">
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc viverra laoreet est, a pretium metus aliquam eget. Maecenas porta is nunc ut viverra. Aenean pulvinar maximus leo, non pharetra quam feugiat et. Suspendisse vitae nunc sed ligula.
+                            Excellent service from Dan Garage Door 24/7! They repaired my broken spring efficiently and on time. Professional, friendly, and reliable—definitely my go-to for all garage door issues. Highly recommend!
                             </p>
                             <div class="client-info-items">
                                 <div class="client-info">
                                     <img src="{{ asset('front/asset2/img/testimonial/client-4.png') }}" alt="img">
                                     <div class="content">
-                                        <h4>Shikhon Islam</h4>
+                                        <h4>Kenneth Jones</h4>
                                         <span>Web Developer</span>
                                         <div class="star">
                                             <i class="fa-solid fa-star"></i>
@@ -398,13 +397,13 @@
                                 <img src="{{ asset('front/asset2/img/testimonial/shape-right.png') }}" alt="img">
                             </div>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nunc viverra laoreet est, a pretium metus aliquam eget. Maecenas porta is nunc ut viverra. Aenean pulvinar maximus leo, non pharetra quam feugiat et. Suspendisse vitae nunc sed ligula.
+                            Dan Garage Door provided excellent service when my spring broke. They were quick to respond, efficient in repairs, and very professional. I highly recommend them for any garage door issues!
                             </p>
                             <div class="client-info-items">
                                 <div class="client-info">
                                     <img src="{{ asset('front/asset2/img/testimonial/client-5.png') }}" alt="img">
                                     <div class="content">
-                                        <h4>Rony Ahmed</h4>
+                                        <h4>Temecca Martin</h4>
                                         <span>Web Development</span>
                                         <div class="star">
                                             <i class="fa-solid fa-star"></i>

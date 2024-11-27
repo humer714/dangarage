@@ -61,7 +61,7 @@
                         <div class="content">
                             <h3>Our Address</h3>
                             <p>
-                                2715 Ash Dr. San Jose,<br> South Dakota 83475
+                                United States
                             </p>
                         </div>
                     </div>
@@ -74,8 +74,8 @@
                         <div class="content">
                             <h3>Email Address</h3>
                             <p>
-                                Mobile :<a href="tel:984756123695">9847 5612 3695</a> <br>
-                                Email :<a href="mailto:example@gmail.com">example@gmail.com</a>
+                                Mobile :<a href="tel:984756123695">+1 (866) 982-4629</a> <br>
+                                Email :<a href="mailto:Support@customerdeskhelp.com">Support@customerdeskhelp.com</a>
                             </p>
                         </div>
                     </div>

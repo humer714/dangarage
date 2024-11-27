@@ -119,6 +119,7 @@
         /* Arrow color */
         top: 64%;
     }
+
 </style>
 
 
@@ -257,8 +258,8 @@
         <div class="service-details-wrapper">
             <div class="row g-4">
                 <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                    <a href="tel:{{ $detail_data->contact_number ?? '+1 (866) 499-2110' }}" class="theme-btn"
-                        style="float:none; display:inline;">{{ $detail_data->contact_number ?? '+1 (866) 499-2110' }}</a>
+                    <a href="tel:{{ $detail_data->contact_number ?? '+1 (866) 982-4629' }}" class="theme-btn"
+                        style="float:none; display:inline;">{{ $detail_data->contact_number ?? '+1 (866) 982-4629' }}</a>
                 </div>
 
             </div>
@@ -406,7 +407,7 @@
                             <div class="content">
                                 <span>call us</span>
                                 <h4><a
-                                        href="tel:{{ $detail_data->contact_number ?? '+1 (866) 499-2110' }}">{{ $detail_data->contact_number ?? '+1 (866) 499-2110' }}</a>
+                                        href="tel:{{ $detail_data->contact_number ?? '+1 (866) 982-4629' }}">{{ $detail_data->contact_number ?? '+1 (866) 982-4629' }}</a>
                                 </h4>
                             </div>
                         </div>

@@ -23,7 +23,7 @@
                 <div class="content">
                     <p>send email</p>
                     <h3>
-                        <a href="mailto:example@gmail.com">example@gmail.com</a>
+                        <a href="mailto:Support@customerdeskhelp.com">Support@customerdeskhelp.com</a>
                     </h3>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="content">
                     <p>call emergency</p>
                     <h3>
-                        <a href="tel:+88012365499">+88 0123 654 99</a>
+                        <a href="tel:+88012365499">+1 (866) 982-4629</a>
                     </h3>
                 </div>
             </div>
@@ -48,8 +48,7 @@
                         </div>
                         <div class="footer-content">
                             <p>
-                                Nullam interdum libero vitae pretium aliquam <br> donec nibh purus laoreet in
-                                ullamcorper vel <br> malesuada sit amet enim.
+                                Dan Garage Door Broken Spring Repair offers expert, <br> reliable garage door spring repairs <br> with over 40 years' experience.
                             </p>
                             <div class="social-icon d-flex align-items-center">
 
