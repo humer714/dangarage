@@ -384,7 +384,6 @@ a {
 a:hover {
     --bs-link-color-rgb: var(--bs-link-hover-color-rgb);
     color: #df1119;
-    font-size: large;
 }
 
 a:not([href]):not([class]),

@@ -6,6 +6,7 @@
 	<title>Company Mail</title>
 </head>
 <body>
+	dd
 <h1>{{$details['title']}}</h1>
 <h1>{{$details['subject']}}</h1>
 <p>{{$details['body']}}</p>

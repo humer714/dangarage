@@ -12,9 +12,6 @@
 
 @section('content')
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
 <style>
     .contact-info-area {
         display: flex;
@@ -119,7 +116,6 @@
         /* Arrow color */
         top: 64%;
     }
-
 </style>
 
 
@@ -132,12 +128,20 @@
         <div class="breadcrumb-wrapper-items">
             <div class="page-heading">
                 <div class="breadcrumb-sub-title">
-                    <h1 class="wow fadeInUp" data-wow-delay=".3s">{{ $detail_data->title ?? '' }}</h1>
+                    <h2 class="text-white">Dan Garage Door Broken Spring, {{ $detail_data->title ?? '' }}, {{ $detail_data->state->title ?? '' }}</h2>
                 </div>
                 <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
                     <li>
                         <a href="{{ route('home') }}">
                             Home
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fa-sharp fa-solid fa-slash-forward"></i>
+                    </li>
+                    <li>
+                        <a href="{{ route('locations') }}">
+                            Locations
                         </a>
                     </li>
                     <li>
@@ -172,10 +176,9 @@
                             <i class="fa-sharp fa-solid fa-plane-arrival"></i>
                         </div>
                         <div class="content">
-                            <h3><a href="#">ocean
-                                    Freight</a></h3>
+                            <h3><a href="#">100% Reliable Repair</a></h3>
                             <p>
-                                It is a long established fact xbliuthat a reader will be distracteda the readable content of a page when looking
+                                Trustworthy garage door opener repair solutions every time, when you need.
                             </p>
                             <a href="#" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -189,6 +192,9 @@
                         <div class="tag-img" style="position: absolute; top: 0px; right: 0px; z-index: 10;">
                             <img src="{{ asset('front/asset2/img/tag.png')}}" alt="img">
                         </div>
+                        <div class="service-image">
+                            <img src="{{ asset('front/asset2/img/service/05.jpg')}}" alt="img">
+                        </div>
                         <div class="bar-shape">
                             <img src="{{ asset('front/asset2/img/service/bar.png')}}" alt="img">
                         </div>
@@ -196,10 +202,9 @@
                             <i class="fa-sharp fa-solid fa-plane-arrival"></i>
                         </div>
                         <div class="content">
-                            <h3><a href="#">ocean
-                                    Freight</a></h3>
+                            <h3><a href="#">Flat Rate Fees</a></h3>
                             <p>
-                                It is a long established fact xbliuthat a reader will be distracteda the readable content of a page when looking
+                                Clear, fixed pricing for all garage door repair and installation.
                             </p>
                             <a href="#" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -213,6 +218,9 @@
                         <div class="tag-img" style="position: absolute; top: 0px; right: 0px; z-index: 10;">
                             <img src="{{ asset('front/asset2/img/tag.png')}}" alt="img">
                         </div>
+                        <div class="service-image">
+                            <img src="{{ asset('front/asset2/img/service/05.jpg')}}" alt="img">
+                        </div>
                         <div class="bar-shape">
                             <img src="{{ asset('front/asset2/img/service/bar.png')}}" alt="img">
                         </div>
@@ -220,10 +228,9 @@
                             <i class="fa-sharp fa-solid fa-plane-arrival"></i>
                         </div>
                         <div class="content">
-                            <h3><a href="#">ocean
-                                    Freight</a></h3>
+                            <h3><a href="#">24/7 Support</a></h3>
                             <p>
-                                It is a long established fact xbliuthat a reader will be distracteda the readable content of a page when looking
+                                Round-the-clock garage door Opener repair services, every day of the year.
                             </p>
                             <a href="#" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
@@ -243,7 +250,6 @@
             <div class="row g-4">
                 <div class="col-12 col-lg-12">
                     <div class="service-details-content">
-                        <h2>{{ $detail_data->title ?? '' }}</h2>
                         <p>{!! $detail_data->description !!}</p>
                     </div>
                 </div>
@@ -268,50 +274,42 @@
 </section>
 
 <!-- Start Service area -->
-<section class="service-section fix section-padding">
+<section class="service-section fix section-padding bg-cover" style="background-image: url('{{ asset('front/asset2/img/service/service-bg.jpg') }}');">
     <div class="container">
         <div class="section-title text-center">
-            <h6 class="wow fadeInUp">
-                <i class="fa-regular fa-arrow-left-long"></i>Our Services
-                <i class="fa-regular fa-arrow-right-long"></i>
-            </h6>
-            <h2 class="wow fadeInUp" data-wow-delay=".2s">
-                Comprehensive Garage Door Services For Installation, Repair, And Maintenance To<br>
-                Ensure Reliable Operation
-            </h2>
+            <h6 class="wow fadeInUp"><i class="fa-regular fa-arrow-left-long"></i>Services<i class="fa-regular fa-arrow-right-long"></i></h6>
+            <h2 class="wow fadeInUp text-white" data-wow-delay=".2s">Best Service for<br>
+                garage door</h2>
         </div>
-        <!-- Swiper Container -->
-        <div class="swiper-container">
+        <div class="array-button">
+            <button class="array-prev"><i class="fa-regular fa-arrow-left-long"></i></button>
+            <button class="array-next"><i class="fa-regular fa-arrow-right-long"></i></button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="swiper service-slider">
             <div class="swiper-wrapper">
-                @foreach ($services as $key => $item)
+                @foreach($services as $key => $item)
                 @if ($item->status == 1 && $item->is_active == 1)
                 <div class="swiper-slide">
-                    <div class="service-box-items items-bg">
+                    <div class="service-box-items">
                         <div class="service-thumb">
                             <img src="{{ $item->image ?? asset('front/asset2/img/service/01.jpg') }}" alt="img">
                         </div>
                         <div class="service-content">
-                            <h2 class="number">{{ $key + 1 }}</h2>
-                            <h3>
-                                <a href="{{ route('service_detail', $item->slug) }}">{{ $item->title ?? '' }}</a>
-                            </h3>
-                            <p>{{ $item->excerpt ?? '' }}</p>
-                            <a href="{{ route('service_detail', $item->slug) }}" class="link-btn">
-                                Explore More <i class="fa-solid fa-arrow-right"></i>
-                            </a>
+                            <h2 class="number">{{$key + 1 }}</h2>
+                            <h3><a href="{{ route('service_detail', $item->slug) }}">
+                                    {{ $item->title ?? '' }}</a></h3>
+                            <p>
+                                {{ $item->excerpt ?? '' }}
+                            </p>
+                            <a href="{{ route('service_detail', $item->slug) }}" class="link-btn">Explore More <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 @endif
                 @endforeach
             </div>
-
-            <!-- Add Pagination if needed -->
-            <div class="swiper-pagination"></div>
-
-            <!-- Add Navigation Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </section>
@@ -440,36 +438,6 @@
 </div>
 <!-- end map -->
 
-
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        loop: true,
-        slidesPerView: 1, // Initially show 1 slide on small screens
-        spaceBetween: 30, // Space between slides
-        autoplay: {
-            delay: 3000, // Automatically change slides every 3 seconds
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true, // Enable pagination dots to be clickable
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            640: {
-                slidesPerView: 1, // 1 slide per view on small devices
-            },
-            768: {
-                slidesPerView: 2, // 2 slides per view on tablets
-            },
-            1024: {
-                slidesPerView: 3, // 3 slides per view on larger screens (like your current design)
-            },
-        }
-    });
-</script>
 
 
 

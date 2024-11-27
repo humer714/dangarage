@@ -30,6 +30,6 @@ class CompanyMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from "our doamin name"')->view('emails.company_mail');
+        return $this->subject('Mail from Dan Garage Door Spring Repair')->view('emails.company_mail', ['details' => $this->details]);
     }
 }

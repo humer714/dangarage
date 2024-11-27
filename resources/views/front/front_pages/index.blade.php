@@ -315,7 +315,7 @@
     </section>
 
     <!-- Start project Area -->
-    <section class="project-section section-padding pt-5 fix">
+    <section class="project-section section-padding pt-5 fix d-none">
         <div class="container">
             <div class="section-title-area">
                 <div class="section-title">
