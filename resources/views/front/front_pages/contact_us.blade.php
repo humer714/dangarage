@@ -129,12 +129,52 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="form-clt">
+                                <input type="text" id="msg_postal_code" placeholder="Postal code" name="postal_code" required>
+                                <div class="icon">
+                                    <i class="fa-sharp fa-light fa-pencil"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".2s">
+                            <div class="form-clt">
+                                <input type="text" id="msg_phone_no" placeholder="Phone No" name="phone_number" required>
+                                <div class="icon">
+                                    <i class="fa-sharp fa-light fa-phone"></i>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".2s">
                             <div class="form-clt">
                                 <input type="text" id="msg_subject" placeholder="Subject" name="subject" required>
                                 <div class="icon">
                                     <i class="fa-sharp fa-light fa-pencil"></i>
                                 </div>
+                            </div>
+                        </div>
+                        <!-- Checkboxes -->
+                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".2s">
+                            <label for="services" class="form-label"><h5>type of service do you need?</h5></label>
+                            <div class="form-check" style="background-color: #F2F5FA;">
+                                <input class="form-check-input" type="checkbox" id="garage_door_repair" name="garage_door_repair" value="Garage Door Repair">
+                                <label class="form-check-label" for="garage_door_repair">Garage Door Repair</label>
+                            </div>
+                            <div class="form-check" style="background-color: #F2F5FA;">
+                                <input class="form-check-input" type="checkbox" id="garage_opener_installation" name="garage_opener_installation" value="Garage Opener Installation">
+                                <label class="form-check-label" for="garage_opener_installation">Garage Opener Installation</label>
+                            </div>
+                            <div class="form-check" style="background-color: #F2F5FA;">
+                                <input class="form-check-input" type="checkbox" id="door_out_of_tracks" name="door_out_of_tracks" value="Door Out of Tracks">
+                                <label class="form-check-label" for="door_out_of_tracks">Door Out of Tracks</label>
+                            </div>
+                            <div class="form-check" style="background-color: #F2F5FA;">
+                                <input class="form-check-input" type="checkbox" id="garage_door_installation" name="garage_door_installation" value="Garage Door Installation">
+                                <label class="form-check-label" for="garage_door_installation">Garage Door Installation</label>
+                            </div>
+                            <div class="form-check" style="background-color: #F2F5FA;">
+                                <input class="form-check-input" type="checkbox" id="other" name="other" value="Other">
+                                <label class="form-check-label" for="other">Other</label>
                             </div>
                         </div>
 
@@ -146,6 +186,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".4s">
                             <button type="submit" class="theme-btn w-100">
                                 Submit

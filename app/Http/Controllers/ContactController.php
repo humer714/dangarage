@@ -45,18 +45,29 @@ class ContactController extends Controller
     {
         //if fail then return back with errors ajax response
         $validator = Validator::make($request->all(), [
-            'name' => 'required',
+            'name' => 'required|max:255',
             'email' => 'required|email',
-            'subject' => 'required',
+            'subject' => 'required|max:255',
+            'postal_code' => 'required|max:255',
+            'phone_number' => 'required|max:255',
             'message' => 'required',
         ]);
         if ($validator->fails()) {
             return redirect()->route('contact')->with('message',  $validator->errors()->first());
         }
+       
         $details = [
             'title' => ($request->name),
             'subject' => ($request->subject),
             'body' => ($request->message),
+            'postal_code' => ($request->postal_code),
+            'phone_number' => ($request->phone_number),
+            'garage_door_repair' => ($request->garage_door_repair),
+            'garage_opener_installation' => ($request->garage_opener_installation),
+            'door_out_of_tracks' => ($request->door_out_of_tracks),
+            'garage_door_installation' => ($request->garage_door_installation),
+            'other' => ($request->other),
+            'email' => ($request->email),
         ];
 
         $data = Contact::create($request->all());
