@@ -94,7 +94,7 @@
 					
                 </ul>
             </p>
-			@if(isset({{$details['body']}}) )
+			@if(isset({{$details['body']}}))
 				<p>
 					<strong>Message:</strong> <br> {{$details['body']}}
 				</p>
