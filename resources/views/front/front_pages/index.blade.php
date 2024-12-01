@@ -158,7 +158,7 @@
                                 We complete repairs promptly and proactively address any issues.
                                 </li>
                             </ul>
-                            <div class="about-author">
+                            <!-- <div class="about-author">
                                 <div class="author-image wow fadeInUp" data-wow-delay=".2s">
                                     <img src="{{ asset('front/asset2/img/about/author.png') }}" alt="author-img">
                                     <div class="content">
@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                                 <img src="{{ asset('front/asset2/img/about/signature.png') }}" alt="img" class="wow fadeInUp" data-wow-delay=".4s">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
