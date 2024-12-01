@@ -1,5 +1,5 @@
 <!-- Footer Section Start -->
-<footer class="footer-section bg-cover bg-cover" style="background-image: url('assets/img/footer/bg.jpg');">
+<footer class="footer-section bg-cover bg-cover" style="background-image: url({{ asset('front/asset2/img/footer/bg.jpg') }});">
     <div class="container">
         <div class="contact-info-area">
             <a href="{{ route('home') }}" class="logo-img wow fadeInUp" data-wow-delay=".2s">
@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 David garage door spring repair. All rights reserved.</p>
+            <p>© 2024 Dan garage door broken spring repair. All rights reserved.</p>
         </div>
     </div>
 </footer>
