@@ -14,7 +14,7 @@
                 <div class="header-main">
                     <div class="logo d-none">
                         <a href="{{ route('home') }}" class="header-logo">
-                            <img src="{{ asset('front/asset2/img/logo/black-logo.svg') }}" alt="logo-img">
+                            <img src="{{ asset('front/asset2/img/logo/black-logo.png') }}" alt="logo-img">
                         </a>
                     </div>
                     <div class="header-left">

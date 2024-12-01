@@ -3,7 +3,7 @@
     <div class="container">
         <div class="contact-info-area">
             <a href="{{ route('home') }}" class="logo-img wow fadeInUp" data-wow-delay=".2s">
-                <img src="{{ asset('front/asset2/img/logo/black-logo.svg') }}" alt="img">
+                <img src="{{ asset('front/asset2/img/logo/black-logo.png') }}" alt="img">
             </a>
             <div class="contact-info-items wow fadeInUp" data-wow-delay=".4s">
                 <div class="icon">
