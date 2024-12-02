@@ -4,6 +4,33 @@
         position: fixed;
     }
 </style>
+
+<!-- Offcanvas Area Start -->
+<div class="fix-area">
+    <div class="offcanvas__info">
+        <div class="offcanvas__wrapper">
+            <div class="offcanvas__content">
+                <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                    <div class="offcanvas__logo">
+                        <a href="{{ route('home') }}" class="header-logo">
+                            <img src="{{ asset('front/asset2/img/logo/black-logo.png') }}" alt="logo-img">
+                        </a>
+                    </div>
+                    <div class="offcanvas__close">
+                        <button>
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-menu fix mb-3"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas__overlay"></div>
+
+
 <!--<< Mouse Cursor Start >>-->
 <div class="mouse-cursor cursor-outer"></div>
 <div class="mouse-cursor cursor-inner"></div>
@@ -48,6 +75,12 @@
                                     </ul>
                                 </nav>
                             </div>
+                        </div>
+                    </div>
+                    {{-- show only sm and md screens --}}
+                    <div class="header__hamburger  d-block d-lg-none my-auto">
+                        <div class="sidebar__toggle">
+                            <i class="fas fa-bars"></i>
                         </div>
                     </div>
                 </div>
