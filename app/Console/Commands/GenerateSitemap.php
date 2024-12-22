@@ -17,40 +17,43 @@ class GenerateSitemap extends Command
 
     public function handle()
     {
+        // Define your live domain URL here
+        $baseUrl = 'https://dangaragedoorbrokenspring.com';
+
         // Create a new sitemap instance
         $sitemap = Sitemap::create();
 
-        // Add static routes
-        $sitemap->add(Url::create('/'))
-                ->add(Url::create('/about-us'))
-                ->add(Url::create('/services'))
-                ->add(Url::create('/projects'))
-                ->add(Url::create('/contact'))
-                ->add(Url::create('/locations'))
-                ->add(Url::create('/blogs'));
+        // Add static routes with full URLs
+        $sitemap->add(Url::create("{$baseUrl}/"))
+                ->add(Url::create("{$baseUrl}/about-us"))
+                ->add(Url::create("{$baseUrl}/services"))
+                ->add(Url::create("{$baseUrl}/projects"))
+                ->add(Url::create("{$baseUrl}/contact"))
+                ->add(Url::create("{$baseUrl}/locations"))
+                ->add(Url::create("{$baseUrl}/blogs"));
 
         // Add dynamic routes for services
-        $services = Service::all(); // Make sure the 'slug' column exists
+        $services = Service::all(); 
         foreach ($services as $service) {
-            $sitemap->add(Url::create("/services/{$service->slug}"));
+            $sitemap->add(Url::create("{$baseUrl}/services/{$service->slug}"));
         }
 
         // Add dynamic routes for projects
-        $projects = Projects::all(); // Make sure the 'slug' column exists
+        $projects = Projects::all();
         foreach ($projects as $project) {
-            $sitemap->add(Url::create("/projects/{$project->slug}"));
+            $sitemap->add(Url::create("{$baseUrl}/projects/{$project->slug}"));
         }
 
         // Add dynamic routes for blog posts
-        $blogs = Blog::all(); // Make sure the 'slug' column exists
+        $blogs = Blog::all();
         foreach ($blogs as $blog) {
-            $sitemap->add(Url::create("/blogs/{$blog->slug}"));
+            $sitemap->add(Url::create("{$baseUrl}/blogs/{$blog->slug}"));
         }
 
         // Add dynamic routes for cities
-        $cities = City::all(); // Make sure the 'slug' column exists
+        $cities = City::all();
         foreach ($cities as $city) {
-            $sitemap->add(Url::create("/{$city->slug}"));
+            $sitemap->add(Url::create("{$baseUrl}/{$city->slug}"));
         }
 
         // Save the sitemap to a file (public folder, for example)
