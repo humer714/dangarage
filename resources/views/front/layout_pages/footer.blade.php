@@ -115,7 +115,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 <span style="color: var(--theme);"> garage door broken spring repair. </span> All rights reserved.</p>
+            <p>© 2024 <span style="color: var(--theme);"> Dan Garage Door Broken Spring Repair. </span> All rights reserved.</p>
         </div>
     </div>
 </footer>
